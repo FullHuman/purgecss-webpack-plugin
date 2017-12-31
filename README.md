@@ -95,6 +95,27 @@ new PurgecssPlugin({
 })
 ```
 
+* #### whitelist and whitelistPatterns
+
+Similar as for the `paths` option, you also can define functions for the these options:
+
+```js
+function collectWhitelist() {
+    // do something to collect the whitelist
+    return ['whitelisted'];
+}
+function collectWhitelistPatterns() {
+    // do something to collect the whitelist
+    return [/^whitelisted-/];
+}
+
+// In the webpack configuration
+new PurgecssPlugin({
+  whitelist: collectWhitelist,
+  whitelistPatterns: collectWhitelistPatterns
+})
+```
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.

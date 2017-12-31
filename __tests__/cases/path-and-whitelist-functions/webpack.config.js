@@ -29,7 +29,7 @@ module.exports = {
     new ExtractTextPlugin('style.css'),
     new PurgecssPlugin({
       paths: () => glob.sync(`${PATHS.src}/*`),
-      whitelist: ['whitelisted'],
+      whitelist: () => ['whitelisted'],
       extractors: [
         {
           extractor: CustomExtractor,
