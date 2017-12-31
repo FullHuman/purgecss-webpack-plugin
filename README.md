@@ -77,6 +77,13 @@ new PurgecssPlugin({
 })
 ```
 
+If you want to regenerate the paths list on every compilation (e.g. with `--watch`), then you can also pass a function:
+```js
+new PurgecssPlugin({
+  paths: () => glob.sync(`${PATHS.src}/*`)
+})
+```
+
 * #### only
 
 You can specify entrypoints to the purgecss-webpack-plugin with the option only:

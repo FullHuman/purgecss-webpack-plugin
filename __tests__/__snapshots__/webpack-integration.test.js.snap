@@ -44,3 +44,18 @@ exports[`Webpack Integration Tests simple-with-exclusion 2`] = `
 }
 "
 `;
+
+exports[`Webpack Integration Tests simple-with-paths-function 1`] = `
+".hello {
+  color: red;
+}
+
+.whitelisted {
+  color: green;
+}
+
+md\\\\:w-2\\\\/3 {
+  color: red;
+}
+"
+`;
