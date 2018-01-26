@@ -20,7 +20,7 @@ export const assets = (assets = [], extensions = []) =>
 
 export const files = (chunk, extensions = [], getter = a => a) =>
     chunk
-        .mapModules(module => {
+        .modules.map(module => {
             const file = getter(module)
             if (!file) return null
             return extensions.indexOf(path.extname(file)) >= 0 && file
