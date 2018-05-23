@@ -1,6 +1,6 @@
 const path = require('path')
 const glob = require('glob')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const PurgecssPlugin = require('../../../src/').default
 
 class CustomExtractor {
@@ -17,32 +17,29 @@ module.exports = {
     mode: 'development',
     optimization: {
         splitChunks: {
-          cacheGroups: {
-            styles: {
-              name: 'styles',
-              test: /\.css$/,
-              chunks: 'all',
-              enforce: true
+            cacheGroups: {
+                styles: {
+                    name: 'styles',
+                    test: /\.css$/,
+                    chunks: 'all',
+                    enforce: true
+                }
             }
-          }
         }
-      },
+    },
     entry: './src/index.js',
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader"
-                  ]
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
             }
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[name].css"
-          }),
+            filename: '[name].css'
+        }),
         new PurgecssPlugin({
             paths: glob.sync(`${PATHS.src}/*`),
             whitelist: ['whitelisted'],
