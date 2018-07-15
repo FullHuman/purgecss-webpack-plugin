@@ -2,9 +2,6 @@
   "groups": {
     "default": {
       "packages": [
-        "examples/postcss-and-scss/package.json",
-        "examples/simple-with-exclusion/package.json",
-        "examples/simple/package.json",
         "package.json"
       ]
     }
