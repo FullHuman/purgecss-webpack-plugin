@@ -47,7 +47,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.9.0",
     "codacy-coverage": "^3.4.0",
-    "css-loader": "^1.0.1",
+    "css-loader": "^3.2.1",
     "eslint": "^6.3.0",
     "jest": "^24.9.0",
     "mini-css-extract-plugin": "^0.8.0",
