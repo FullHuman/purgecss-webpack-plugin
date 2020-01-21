@@ -60,7 +60,7 @@
     "webpack-cli": "^3"
   },
   "dependencies": {
-    "purgecss": "^1.4.0",
+    "purgecss": "^2.0.5",
     "webpack-sources": "^1.4.3"
   },
   "peerDependencies": {
